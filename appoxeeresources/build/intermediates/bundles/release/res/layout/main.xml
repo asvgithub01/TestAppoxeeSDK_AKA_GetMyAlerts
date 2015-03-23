@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <Button
+        android:id="@+id/open_inbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/open_inbox" />
+
+    <ImageView
+        android:id="@+id/red_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/open_inbox"
+        android:layout_alignRight="@id/open_inbox"
+        android:layout_alignTop="@id/open_inbox"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/red_badge" />
+
+    <TextView
+        android:id="@+id/red_badge_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/red_badge"
+        android:layout_alignLeft="@id/red_badge"
+        android:layout_alignRight="@id/red_badge"
+        android:layout_alignTop="@id/red_badge"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout><!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/src/main/res/layout/main.xml -->

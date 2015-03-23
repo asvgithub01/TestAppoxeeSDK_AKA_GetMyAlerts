@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="customBlack">#000000</color>
+    <color name="customRed">#ffe82528</color>
+    <color name="customBone">#ffe</color>
+    <color name="customLGrey">#ccc</color>
+    <color name="customDGrey">#666</color>
+    <color name="customAppLigthGreen">#00bbd2</color>
+    <color name="customAppDarkGreen">#008493</color>
+    <color name="customAppHeaderGreen">#0397a7</color>
+</resources>

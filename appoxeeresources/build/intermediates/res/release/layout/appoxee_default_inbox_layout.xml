@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/inbox_background_color" >
+
+    <RelativeLayout
+        android:id="@+id/inbox_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header" >
+
+        <ImageView
+            android:id="@+id/inbox_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/inbox_icon"
+            android:src="@drawable/icn_inbox" />
+
+        <TextView
+            android:id="@+id/appoxee_default_inbox_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/inbox_icon"
+            android:text="@string/inbox_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:typeface="normal" />
+
+        <ImageView
+            android:id="@+id/close_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/close_icon"
+            android:onClick="close"
+            android:src="@drawable/icn_close" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/close_icon"
+            android:contentDescription="@string/separator"
+            android:src="@drawable/header_close_seprator_middle" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/appoxee_default_inbox_list_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inbox_footer_wrapper"
+        android:layout_below="@+id/inbox_header" >
+
+        <com.appoxee.widgets.PullToRefreshListView
+            android:id="@+id/appoxee_default_inbox_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="#00000000"
+            android:divider="#19000000"
+            android:dividerHeight="4dp"
+            android:drawSelectorOnTop="true"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:smoothScrollbar="true" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/appoxee_default_empty_inbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inbox_footer_wrapper"
+        android:layout_below="@+id/inbox_header"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/empty_inbox_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/no_messages_yet"
+            android:src="@drawable/inbox_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/empty_inbox_image"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_messages_yet"
+            android:textColor="@color/no_messages_yet"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/inbox_footer_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/inbox_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/buttons_background"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/feedback_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:drawableLeft="@drawable/icn_feedback"
+                android:gravity="center_vertical"
+                android:text="@string/open_feedback"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/separator"
+                android:src="@drawable/buttons_seperator_middle"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/moreapps_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/separator"
+                android:drawableLeft="@drawable/icn_moreapps"
+                android:gravity="center_vertical"
+                android:text="@string/open_more_apps"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/inbox_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/footer" >
+
+            <ImageView
+                android:id="@+id/appoxee_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/appoxee_logo"
+                android:paddingRight="7dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/powered_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/appoxee_logo"
+                android:text="@string/powered_by"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:typeface="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/src/main/res/layout/appoxee_default_inbox_layout.xml -->

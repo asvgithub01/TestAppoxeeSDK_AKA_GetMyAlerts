@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context="com.gigigo.asv.testappoxeesdk.NotificationActivity"
+    >
+    <item android:id="@+id/mnu_Suscription" android:title="@string/mnuSuscription"
+        android:orderInCategory="101" app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/mnu_notification" android:title="@string/mnuNotification"
+        android:orderInCategory="101" app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/mnu_chat" android:title="@string/mnuChat"
+        android:orderInCategory="101" app:showAsAction="collapseActionView" />
+</menu>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="inbox_background_color">#000000</color>
+    <color name="header_background_color">#000000</color>
+    <color name="footer_background_color">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    
+    <color name="appoxee_default_inbox_message_read_backgound_color">#FFFFFF</color>
+    <color name="appoxee_default_inbox_message_read_color">#444444</color>
+    <color name="appoxee_default_inbox_message_content_read_color">#666666</color>
+    
+    <color name="appoxee_default_inbox_message_unread_backgound_color">#FFFFFF</color>
+    <color name="appoxee_default_inbox_message_unread_color">#000000</color>
+    <color name="appoxee_default_inbox_message_content_unread_color">#333333</color>
+    
+    <color name="appoxee_default_inbox_message_pressed_backgound_color">#59c1e8</color>
+    <color name="appoxee_default_inbox_message_pressed_color">#ffffff</color>
+    <color name="appoxee_default_inbox_message_content_pressed_color">#ffffff</color>
+    
+    <color name="no_messages_yet">#666666</color>
+    <color name="buttons_background">#222222</color>
+    <color name="date_color">#979797</color>
+    <color name="delete_button_color">#ed1963</color>
+    <color name="yellow1">#FFFF00</color>
+    <color name="yellow2">#FFFF00</color>
+    <color name="grey05">#808080</color>
+    <color name="orange5">#ff9900</color>
+    <color name="orange4">#ff9900</color>
+    <color name="red1">#ed1963</color>
+    <color name="red2">#ac4569</color> 
+    <color name="pressed">#9b9b9b</color> 
+    <color name="oops_message_color">#606060</color> 
+</resources>

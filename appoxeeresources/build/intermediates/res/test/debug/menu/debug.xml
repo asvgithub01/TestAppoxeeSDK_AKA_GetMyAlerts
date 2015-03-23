@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/api"
+        android:checkable="false"
+        android:checked="false"
+        android:title="API"
+        android:visible="true">
+    </item>
+
+</menu><!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/src/main/res/menu/debug.xml --><!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/build/intermediates/bundles/debug/res/menu/debug.xml -->

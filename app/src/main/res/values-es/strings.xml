@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GetMyAlert</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Configuracion</string>
+
+    <string name="title_activity_notification">Mis Alertas</string>
+    <string name="title_activity_push">Enviar Notificaciones</string>
+    <string name="title_activity_chat">Chat</string>
+
+    <string name="strContinue">Continuar</string>
+    <string name="strSend">Enviar</string>
+
+    <string name="HeaderActMain">Selecciona las categorias:</string>
+    <string name="LoadingDialog">Cargando. Espera...</string>
+    <string name="NoInternetDialog">No tienes conexión</string>
+
+    <string name="mnuSuscription">Suscripciones</string>
+    <string name="mnuMyAlert">Mis Alertas</string>
+    <string name="mnuNotification">Notificaciones</string>
+    <string name="mnuChat">Chat</string>
+
+    <string name="lblSwctPushOFF">Predefinidas</string>
+    <string name="lblSwctPushON">Personalizadas</string>
+
+    <string name="OK">YeAh!</string>
+    <string name="NOTOK">OUch!</string>
+
+    <string name="lblMsg">Mensaje</string>
+    <string name="lblAD">Url Publicidad</string>
+    <string name="lblEND">Url Final</string>
+    <string name="lblTAG">TAG</string>
+
+    <string name="lblNICK">Pon tu nick:</string>
+
+    <!--Nuevos str tras applicar styles-->
+    <string name="ggg_headerCategories">Escoge los <b>temas de tu interés</b> para tus notificaciones</string>
+
+
+</resources>

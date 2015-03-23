@@ -1,0 +1,8 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.gigigo.asv.testappoxeesdk.CustomView"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.gigigo.asv.testappoxeesdk.CustomView.myLoading android:background="#ccc"
+        android:layout_width="300dp" android:layout_height="300dp"  />
+
+</FrameLayout>

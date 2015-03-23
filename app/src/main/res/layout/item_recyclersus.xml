@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="110dp"
+    android:layout_width="match_parent"
+    android:id="@+id/frmBackgroud"
+    android:layout_marginRight="@dimen/ggg_MediumMargin"
+    android:layout_marginBottom="@dimen/ggg_MediumMargin"
+    android:background="@drawable/noticias">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/frmSelected"
+        android:alpha="0.8"
+        android:background="@color/customAppLigthGreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgSelect"
+            android:background="@drawable/ic_select"
+            android:layout_centerInParent="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblCategorie"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/ggg_MediumMargin"
+        android:layout_marginTop="@dimen/ggg_MediumMargin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/ggg_MediumTextSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+</FrameLayout>

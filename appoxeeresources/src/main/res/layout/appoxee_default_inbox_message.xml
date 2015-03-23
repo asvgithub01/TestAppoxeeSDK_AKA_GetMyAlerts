@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <WebView
+        android:id="@+id/appoxee_default_inbox_message_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inbox_message_footer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/appoxee_default_inbox_message_close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/close_icon"
+        android:onClick="close"
+        android:src="@drawable/icn_close" />
+
+    <ProgressBar
+        android:id="@+id/appoxee_default_inbox_message_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/appoxee_default_inbox_message_error_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" >
+  
+
+
+                    <ImageView
+        android:id="@+id/error_close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/close_icon"
+        android:onClick="close"
+        android:src="@drawable/icn_close" />
+        
+        <ImageView
+            android:id="@+id/oops_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/oops_logo"
+            android:layout_below="@+id/error_close_icon"
+            android:layout_marginTop="40dp"
+            
+            android:src="@drawable/oops" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oops_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:lines="2"
+            android:maxWidth="200dp"
+            android:text="@string/oops_message"
+            android:textColor="@color/oops_message_color"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/oops_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/oops_icon"
+            android:src="@drawable/no_connection" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/appoxee_default_inbox_message_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer" >
+
+        <ImageView
+            android:id="@+id/appoxee_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/appoxee_logo"
+            android:paddingRight="7dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/powered_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/appoxee_logo"
+            android:text="@string/powered_by"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:typeface="normal" />
+    </RelativeLayout>
+
+</RelativeLayout>

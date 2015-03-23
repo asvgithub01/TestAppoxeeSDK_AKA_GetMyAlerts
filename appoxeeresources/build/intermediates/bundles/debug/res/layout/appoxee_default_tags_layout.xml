@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appoxee_default_tags_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/appoxee_default_tagsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tags_string"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/appoxee_default_aliasButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/appoxee_default_tagsBtn"
+        android:text="@string/alias_string"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/appoxee_default_attributesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/appoxee_default_tagsBtn"
+        android:text="@string/attributes_string"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/appoxee_default_tags_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appoxee_default_aliasButton" />
+
+    <ProgressBar
+        android:id="@+id/appoxee_default_tag_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+</RelativeLayout><!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/src/main/res/layout/appoxee_default_tags_layout.xml -->

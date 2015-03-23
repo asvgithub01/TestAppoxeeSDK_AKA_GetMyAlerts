@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gigigo.asv.testappoxeesdk"
+    android:versionCode="1000"
+    android:versionName="2.3.5" > <!-- asv esta linea me la borro JB, xo no se si es necesaria -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <!-- GCM connects to Google Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <permission
+        android:name="com.gigigo.asv.testappoxeesdk.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.gigigo.asv.testappoxeesdk.permission.C2D_MESSAGE" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+    <!-- ASV AL LORO MALBORO! estos putos permisos están en 2 namespace diff los q van comentados -->
+    <!-- com.google.android.gcm.demo.app.permission son los q estaban descomentados antes y en su lugar pongo: -->
+    <!--
+com.appoxee.example.permission qeu son los q dicen q se pongan en la docu de appoxee..
+
+    SUTITUYENDO EL NOMBRE DEL PACKAGE COMO PONE MAS ARRIBA
+    -->
+    <!-- <permission android:name="com.google.android.gcm.demo.app.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <!--  -->
+    <!-- <uses-permission android:name="com.google.android.gcm.demo.app.permission.C2D_MESSAGE" /> -->
+    <!-- <permission -->
+    <!-- android:name="com.appoxee.example.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <!-- <uses-permission android:name="com.appoxee.example.permission.C2D_MESSAGE" /> -->
+    <!--
+asv aqui al loro q falta:
+
+    -android:name tal como dice el docu de integracion, manke...
+    - <service android:name=".GcmIntentService" /> xo es q no lo tengo, creo q esto es para manejar en async lo q
+    hace el broadcastreceiver
+    -->
+    <application
+        android:name=".TestAppoxee"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:enabled="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/getmyalert_icono"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme" >
+
+        <!-- Required for applications which use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <!-- <intent-filter> -->
+            <!-- &lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt; -->
+            <!-- &lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt; -->
+            <!-- </intent-filter> -->
+        </activity>
+        <!-- android:name="com.google.android.gcm.GCMBroadcastReceiver" -->
+        <receiver
+            android:name=".GCMConnectBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receive the registration id -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.gigigo.asv.testappoxeesdk" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".GCMIntentService" />
+        <!--
+        Must have for Push Support by Appoxee
+
+        PARA QUE CHUTE EL Inboxq algo tiene q ver con los richmessages hay q añadir mas movidas
+        <activity android:name="com.appoxee.activities.Inbox"/>
+        <activity android:name="com.appoxee.activities.MoreApps"/>
+        <activity android:name="com.appoxee.activities.Feedback"/>
+        <activity android:name="com.appoxee.activities.SplashScreen" />
+        <activity android:name ="com.appoxee.activities.InboxMessage"/>
+        -->
+
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:screenOrientation="portrait" />
+
+        <!-- android:label="@string/title_activity_push" -->
+        <activity
+            android:name=".PushActivity"
+            android:immersive="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashAnimActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SuscriptionActivity"
+            android:screenOrientation="portrait" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/build/intermediates/bundles/debug/res/values-gr/values.xml -->
+    <eat-comment/>
+    <string name="action_settings">Settings</string>
+    <string name="alias_string">Alias</string>
+    <string name="appoxeeSenderId">appoxeesdk@gmail.com</string>
+    <string name="appoxee_logo">Appoxee logo</string>
+    <string name="attributes_string">Logs</string>
+    <string name="checkbox_string">CheckBox</string>
+    <string name="close_icon">Close icon</string>
+    <string name="cnn">CNN</string>
+    <string name="date">30/12/2012</string>
+    <string name="delete">DELETE</string>
+    <string name="feedback_icon">Feedback icon</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="hello">Hello Appoxee !</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="inapp_string">InApp</string>
+    <string name="inbox_icon">Inbox icon</string>
+    <string name="inbox_title">My Inbox</string>
+    <string name="mark_as_read">Mark as read</string>
+    <string name="message_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="message_title">Welcome to my application, it is great !!!</string>
+    <string name="more_apps_icon">More apps icon</string>
+    <string name="more_apps_title">Περισσότερες Εφαρμογές</string>
+    <string name="no_messages_yet">Δεν υπάρχουν μηνύματα</string>
+    <string name="oops_icon">Δεν υπάρχει σύνδεση</string>
+    <string name="oops_logo">Oops</string>
+    <string name="oops_message">Seems we have a problem, Please try again later</string>
+    <string name="open_feedback">Feedback</string>
+    <string name="open_inbox">Open Appoxee Inbox</string>
+    <string name="open_more_apps">Περισσότερες Εφαρμογές</string>
+    <string name="optout_string">OptOut</string>
+    <string name="pop_up_badge">Badge Pop-Up</string>
+    <string name="powered_by">Powered By:</string>
+    <string name="ptr_last_updated">Updated: %1$s</string>
+    <string name="ptr_pull_to_refresh">Pull to refresh</string>
+    <string name="ptr_refreshing">Refreshing…</string>
+    <string name="ptr_release_to_refresh">Release to refresh</string>
+    <string name="pull_to_refresh_pull_label">Pull to refresh</string>
+    <string name="pull_to_refresh_refreshing_label">Φόρτωση</string>
+    <string name="pull_to_refresh_release_label">Release to refresh</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh</string>
+    <string name="separator">Separator</string>
+    <string name="tags_string">Tags</string>
+    <string name="title_activity_main">Main</string>
+    <string name="yahoo">Yahoo</string>
+</resources>

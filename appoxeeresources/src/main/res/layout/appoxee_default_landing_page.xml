@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <WebView
+        android:id="@+id/appoxee_default_landing_page_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+    
+    <ImageView
+        android:id="@+id/appoxee_default_landing_page_close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/close_icon"
+        android:onClick="close"
+        android:src="@drawable/icn_close" />
+
+</RelativeLayout>

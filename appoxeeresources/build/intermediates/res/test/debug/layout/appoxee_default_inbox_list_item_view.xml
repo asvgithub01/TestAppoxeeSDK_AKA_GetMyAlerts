@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appoxee_default_inbox_message_layout"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp" >
+
+    <TextView
+        android:id="@+id/appoxee_default_inbox_message_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:text="@string/message_title"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/appoxee_default_inbox_message_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/appoxee_default_inbox_message_title"
+        android:text="@string/date"
+        android:textColor="@color/date_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/appoxee_default_inbox_message_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/appoxee_default_inbox_message_title"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/appoxee_default_inbox_message_title"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/appoxee_default_inbox_message_date"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:scrollHorizontally="true"
+        android:text="@string/message_content"
+        android:textColor="@color/appoxee_default_inbox_message_unread_color"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/appoxee_default_delete_button"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:layout_centerVertical="true"
+        android:background="@layout/delete_button"
+        android:focusable="false"
+        android:text="@string/delete"
+        android:onClick="deleteItem"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout><!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/src/main/res/layout/appoxee_default_inbox_list_item_view.xml --><!-- From: file:/D:/Asv/Android/Proyectos/GetMyAlerts/TestAppoxeeSDK/appoxeeresources/build/intermediates/bundles/debug/res/layout/appoxee_default_inbox_list_item_view.xml -->

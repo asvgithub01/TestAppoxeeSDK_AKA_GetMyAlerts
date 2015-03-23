@@ -1,0 +1,79 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gigigo.asv.testappoxeesdk.SuscriptionActivity"
+    android:id="@+id/drawer_layout">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar_bottom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:src="@drawable/ic_uno"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:src="@drawable/ic_dos"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/BtnAnim"
+                android:text="anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:text="@string/ggg_headerCategories"
+            android:textColor="@color/customLGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ggg_BigMargin"
+            android:layout_marginRight="@dimen/ggg_BigMargin"
+            android:layout_marginTop="@dimen/ggg_MediumMargin" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lstSuscriptions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/ggg_BigMargin"
+            android:layout_marginTop="@dimen/ggg_MediumMargin"
+            android:layout_marginRight="@dimen/ggg_MediumMargin"
+            android:layout_marginBottom="@dimen/ggg_BigMargin" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/customAppLigthGreen"
+        android:choiceMode="singleChoice" />
+
+</android.support.v4.widget.DrawerLayout>
+
+    <!--<android.support.v7.widget.RecyclerView--><!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:id="@+id/lstSuscriptions"--><!--android:layout_width="match_parent"--><!--android:layout_height="400dp"--><!--/>-->

@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gigigo.asv.testappoxeesdk.NotificationActivity">
+
+<!--//todo meter una capa por encima-->
+    <Button
+        android:id="@+id/BtnContinue"
+        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:text="@string/strContinue"
+        android:drawableRight="@drawable/ic_go"
+        android:drawablePadding="@dimen/ggg_zeroMargin"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        ></Button>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginEnd="0dp" />
+
+</LinearLayout>
